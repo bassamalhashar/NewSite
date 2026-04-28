@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl"  >
+<head dir="rtl">
+<script type = "text/javascript" src="Scrxx3.js"></script> 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" dir='rtl'>
+   <title>
+       معرفة الرسوم في المنافذ اليمنية 
+   </title>
+   <style dir="rtl">  
+     img { 
+     vertical-align: middle; 
+     border-style: none; 
+     }        
+     
+     body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:25px;
+  margin:0;
+  background-color:#f4f4f4;
+  padding-left: 15px;
+}
+.button_1{
+  height:30px;
+  background:#667756;
+  border:1;  
+  padding-left: 10px;
+  padding-right:10px;
+  color:#ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button_3 {
+           border: none;
+           background: green;
+           border-radius: 5px;
+           padding: 3px;
+           color: #fff;
+           font-weight: bold;
+           font-size: 11px;
+           text-transform: uppercase;
+       }  
+.button_4 {
+           border: none;
+           background: red;
+           border-radius: 5px;
+           padding: 3px;
+           color: #fff;
+           font-weight: bold;
+           font-size: 11px;
+           text-transform: uppercase;
+       }            
+    .tabs {
+  position: relative;
+  
+  width: 500px;
+  margin: 25px 0;
+  
+}
+.tab {
+  float: right;
+}
+.tab label {
+  background: #bbb; 
+  padding: 10px; 
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-left: 1px; 
+  
+}
+
+.tab input[type=radio] {
+  display: none;   
+}
+
+input[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+}
+input[type=radio]:checked ~ label ~ .tab-content {
+  display: block;
+}
+
+   </style>
+</head>
+<body id ="ttt" onload="filesAdd()" >
+
+   <header>
+      <nav>
+         <b style="color: rgb(0,0,128)" ><h1 style="text-align:center"> معرفة الرسوم في المنافذ اليمنية </h1></b>
+         
+       <!-- <button onclick="btn()"> &#9776;</button> -->
+        
+           
+        <div id="d1"></div>
+<!-- <selectmenu id="my-custom-select" border="1" onchange="Abut()"></selectmenu>    -->  
+    <div class="tabs">                 
+  <div class="tab">
+       <input type="radio" name="gende" id="Y" checked="true" onchange="AddTag()"/>
+   <label for="Y" ><b> المنافذ البريةالرقابية
+  </b>
+   </label>
+  </div>
+
+  <div class="tab">
+    <input type="radio" name="gende" id="N" onchange="AddTag()"/>
+    
+   <label for="N" > <b>موانئ الحديدة
+   
+   </b>
+   </label>
+   </div><br />
+
+</div>
+<input type="button" onclick="newXX()" value="جديد"class="button_1"/>
+<label id ="lnkUpdt" style="color:red"> متبقي لك</label>
+<form id="frmAll" style="background-color: rgb(1, 128, 128)">
+    <label id="titl" style="color:maroon"><b>معرفة الرسوم الجمركية للمنافذ البرية :</b></label>
+   <table border=1>
+     <tr> <td height ="10">
+         <b style="color: maroon"  >
+ العملة
+&#128184 </b>
+  </td><td> <select id="susd" onchange="selectusd()" class="input">
+    <option value="68.2">AED</option>
+<option value="179.23">AUD</option>
+<option value="135.15">BGL</option>
+<option value="664.44">BHD</option>
+<option value="195.65">CAD</option>
+<option value="258.43">CHF</option>
+<option value="37.93">CNY</option>
+<option value="629.79">CYP</option>
+<option value="35.52">DKK</option>
+<option value="13.56">EGP</option>
+<option value="4.83">ETB</option>
+<option value="264.33">EUR</option>
+<option value="314.63">GBP</option>
+<option value="3.27">INR</option>
+<option value="0.01">IRR</option>
+<option value="353.31">JOD</option>
+<option value="1.92">JPY</option>
+<option value="0.2">KRW</option>
+<option value="816.81">KWD</option>
+<option value="0.17">LBP</option>
+<option value="25.1">MAD</option>
+<option value="57.42">MYR</option>
+<option value="26.93">NOK</option>
+<option value="850.63">OMR</option>
+<option value="1.35">PKR</option>
+<option value="56.38">PLN</option>
+<option value="60.63">PLZ</option>
+<option value="68.67">QAR</option>
+<option value="66.79">SAR</option>
+<option value="25.74">SEK</option>
+<option value="180.95">SGD</option>
+<option value="0.1">SYO</option>
+<option value="0.1">SYP</option>
+<option value="7.27">THB</option>
+<option value="82.13">TND</option>
+<option value="144.1">TPY</option>
+<option value="16.99">TRL</option>
+<option value="8.49">TWD</option>
+<option value="250.5"selected="true">USD</option>
+<option value="1">YER</option>
+  </select>         </td>
+  
+ <td> <input type="number" name="Dollar" id="Dollar" value ="250.5" style="width : 80px" onfocus="fcus(this.id)"/> </td> 
+  </tr> 
+  </table>
+  
+    <table border=1 >
+     <tr> <td>
+     <b style="color: maroon"  >    
+   شروط التسليم :
+  </td><td>
+      <select id="scif" style="width:120px" class="input">
+<option value="1.01">CFR</option>
+<option value="1" selected="true">CIF</option>
+<option value="1">CIP</option>
+<option value="1">DAF</option>
+<option value="1">DDB</option>
+<option value="1">EXQ</option>
+<option value="1">EXW</option>
+<option value="1">FAS</option>
+<option value="1">FOA</option>
+<option value="1.250">FOB</option>    
+         </select>         
+  </td></tr> </table>
+  <table border=1 id="dd">
+     <tr> <td>
+     <b style="color: maroon"  >    
+   نوع النقل :
+  </td><td>
+     <input type="radio" name="gender1" id="N2" onchange="f()">
+   <label for="No2">بحري</label>
+   
+   
+   <input type="radio" name="gender1" id="Y2" checked="true" onchange="f()" />
+    <label for="Yes2"> بري </label>
+   
+   </td>
+      <td>
+          <b style="color: maroon"  >
+   عدد القواطر :
+    </td><td> <input type="text" id="Qat" placeholder="عدد القواطر" style="width : 40px" value="1" onfocus="fcus(this.id)"/>   </td></tr></table><table border=1>
+     <tr> <td>
+    <b style="color: maroon"  >
+               هل المستورد من كبار المكلفين ؟
+ </td><td>     <input type="radio" name="gender" id="Y1" onchange="clrs()" /> &#10004;
+   <!-- <label id="Yes1"> نعم </label> -->
+   <!-- <img src="images\yes.png" width="25" height="25" id="yy2"> -->
+       <input type="radio" name="gender" id="N1" checked="true" onchange="clrs()" />
+  &#10006;     
+       
+   <!-- <label id="No1" > لا </label> -->
+<!--    <img src="images\no.png" width="25" height="25" style="background-color: #bbb" id="nn2"> -->
+   </td></table>
+  <table border=1>
+     <tr> <td>
+    <b style="color: maroon"  >
+               هل المصرح نفس المستورد ؟
+ </td><td>     <input type="radio" name="gender4" id="Y4" onchange="clrs()"/>
+   <!-- <label id="Yes4"> نعم </label> -->
+   &#10004;
+   <!-- <img src="images\yes.png" width="25" height="25" id="yy3"> -->
+       <input type="radio" name="gender4" id="N4" checked="true" onchange="clrs()"/>
+      &#10006; 
+       <!-- <img src="images\no.png" width="25" height="25" id="nn3" style="background-color: #bbb"> -->
+   <!-- <label id="No4" > لا </label> -->
+   </td></table> 
+ <table border=1>
+     <td>
+        <b style="color: maroon"  >
+     الاتفاقيات :
+     <td>
+    <!--    <select id="sels" style="width:120px" class="input">
+<option value="1" selected="true"> </option>
+<option value="1">ELS</option>    
+         </select>       -->
+         <input type ="text" id="sels" onfocus="fcus(this.id)"/>
+     </td>  
+   </td></table>   
+  <table border=1>
+     <tr> <td>
+         <b style="color: maroon"  >
+     عدد الاصناف :
+ </td><td>  <input type="number" name="Num" id="NumPkg1" placeholder="عدد الاصناف" style="width : 80px" oninput= "generateTable()" onfocus="fcus(this.id)"/></td>
+ <td>
+     <textarea id="pst" placeholder="الصق من اقرار اكسل بنفس الترتيب"  style="font-size: 11px; width :200px; text-align:right;"  onchange="pastexcel()" onfocus="fcus(this.id)"></textarea>
+ </td><td>
+   <input type="button" onclick="pastexcel()" value="موافق"class="button_2"/>
+ </td>
+ </tr></table>
+   <form id ="dv1"></form>
+   <input"text" id= "outp"></input>
+  <input type ="button" onclick="addrow()" value ="اضافة صنف &#10133;" class="button_3"/>
+        <input type ="button" onclick="delrow()" value ="حذف صنف &#10134;" class="button_4"/>   
+   <div id= "output1" style="background-color: rgb(255, 255, 230)"></div>
+<div id= "output2" style="background-color: rgb(255, 255, 230)"></div>
+<textarea id = "output" visibility="hidden"  style="background-color: rgb(255, 255, 230)"></textarea>
+</form>
+
+</body>
+</html>
